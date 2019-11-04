@@ -91,17 +91,17 @@ img {
 
 .main {
     height: 657px;
-    background: url('../img/bg-desktop.jpg') no-repeat;
+    background: url('../img/bg-desktop.jpg') no-repeat center center;
     background-size: cover;
-    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;
+/*    -webkit-background-size: 100% 100%;
+    background-size: 100% 100%;*/
     background-color: #ccc;
     color: #fff;
     position: relative;
 }
 
 .main:before{
-		position: absolute;
+	position: absolute;
     content: " ";
     top: 75px;
     left: 0;
@@ -169,10 +169,10 @@ img {
     flex-direction: column;
 }
 
-.main .left__container {
+/*.main .left__container {
     margin-left: 13%;
     margin-right: 2%;
-}
+}*/
 
 .left__container .guy-mobile{
 	display: none;
@@ -227,10 +227,17 @@ img {
     font-size: 16px;
     text-transform: uppercase;
 }
-
+@media (min-width: 1025px) {
+    .main .left__container{
+        margin: 0 auto;
+    }
+    .main .right__container{
+        padding-right: 100px;
+    }
+}
 @media (max-width : 1024px) {
     .main {
-        height: 1090px;
+        height: 1266px;
         padding-bottom: 25px;
         background-image: url('../img/bg-tablet.jpg');
     }
