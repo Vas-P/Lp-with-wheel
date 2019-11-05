@@ -93,15 +93,13 @@ img {
     height: 657px;
     background: url('../img/bg-desktop.jpg') no-repeat center center;
     background-size: cover;
-/*    -webkit-background-size: 100% 100%;
-    background-size: 100% 100%;*/
     background-color: #ccc;
     color: #fff;
     position: relative;
 }
 
 .main:before{
-	position: absolute;
+		position: absolute;
     content: " ";
     top: 75px;
     left: 0;
@@ -111,6 +109,26 @@ img {
     z-index: 1;
     background: url(../img/coins-desktop.png) no-repeat;
     background-size: 100% 100%;
+}
+.left__container:before{
+		position: absolute;
+		content: " ";
+		width: 34%;
+		height: 63%;
+		background: url(../img/Guys-desktop.png) no-repeat;
+		z-index: 0;
+    top: 60%;
+    left: 38%;
+}
+.right__container:before{
+		position: absolute;
+		content: " ";
+		width: 20%;
+		height: 68%;
+		background: url(../img/cowboy-desktop.png) no-repeat;
+		z-index: 0;
+    top: 59.5%;
+    left: 75%;
 }
 
 .main h1, .main h2, .main h3 {
@@ -160,6 +178,7 @@ img {
     flex-direction: row;
     padding: 0 70px;
     margin-top: 75px;
+    position: relative;
 }
 
 .main__inner > div {
@@ -168,11 +187,6 @@ img {
     align-items: center;
     flex-direction: column;
 }
-
-/*.main .left__container {
-    margin-left: 13%;
-    margin-right: 2%;
-}*/
 
 .left__container .guy-mobile{
 	display: none;
@@ -250,12 +264,11 @@ img {
     		content: " ";
     		top: 77%;
     		left: 53%;
-    		width: 30%;
+    		width: 42%;
     		height: 21%;
     		display: block;
     		z-index: 1;
     		background: url(../img/guys-tablet.png) no-repeat;
-    		background-size: 100% 100%;
     }
     .main h1{
         margin: 5px 0 20px;
@@ -311,6 +324,21 @@ img {
 
 		.arrow{top: 168px;left: 165px;}
     .arrow img{width: 166px;height: 180px;}
+
+    .left__container:before{
+				position: absolute;
+				content: " ";
+				width: 37%;
+				height: 100%;
+				background: url(../img/cowboy-tablet.png) no-repeat;
+				z-index: 0;
+				top: 42%;
+    		left: 63%;
+		}
+
+		.right__container:before{
+			display: none;
+		}
 }
 
 @media (min-width: 500px) and (max-width: 728px) {
@@ -323,13 +351,12 @@ img {
 				position: absolute;
     		content: " ";
     		top: 77%;
-    		left: 53%;
-    		width: 30%;
-    		height: 20%;
+    		left: 50%;
+    		width: 50%;
+    		height: 27%;
     		display: block;
     		z-index: 1;
     		background: url(../img/guys-tablet.png) no-repeat;
-    		background-size: 100% 100%;
 		}
 		.main .wheel {
    		 height: 350px;
@@ -399,6 +426,11 @@ img {
         max-width: 280px;
         font-size: 13px;
     }
+
+    .left__container:before{
+    		left: 58%;
+    		width: 41%;
+    }
 }
 
 @media (max-width: 500px) {
@@ -436,6 +468,9 @@ img {
     		top: 41%;
     		left: 46%;
 		}	
+		.left__container:before{
+				display: none;
+		}
 		.main h1{
 				margin: 41px 0 16px 0;
 		}	
@@ -537,4 +572,20 @@ img {
 
   .arrow{top: 85px;left: 90px;}
   .arrow img{width: 116px;height: 130px;}
+}
+
+@media (min-height: 900px){
+	.main {
+		height: 800px;
+	}
+
+	.right__container:before{
+		top: 79%;
+	}
+}
+
+@media (min-height: 1024px) , (min-height: 1366px){
+	.main{
+		height: 1266px;
+	}
 }
